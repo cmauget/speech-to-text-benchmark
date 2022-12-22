@@ -1,3 +1,4 @@
+import os
 from pydub import AudioSegment
 from pydub.silence import split_on_silence
 import torchaudio
@@ -8,11 +9,12 @@ from scipy.io.wavfile import write
 def split_silence(audio_file):
     sound_file = AudioSegment.from_wav(audio_file)
     audio_chunks = split_on_silence(sound_file, min_silence_len=500, silence_thresh=-33, keep_silence=5000 )
+    dir_path = os.path.dirname(os.path.realpath(__file__))
 
     for i, chunk in enumerate(audio_chunks):
         out_file = "chunk{0}.wav".format(i)
         print("exporting", out_file)
-        chunk.export("/home/cmauget/Bureau/Wikit//slice/"+out_file, format="wav")
+        chunk.export(dir_path+"/slice/"+out_file, format="wav")
 
 
 def split_sb(audio_file):
@@ -41,8 +43,8 @@ def export_np(audio_array ,nb_pop ,fs=8000):
 
 
 
-
-audio_file = "/home/cmauget/Bureau/Wikit/600898_short.wav"
+dir_path = os.path.dirname(os.path.realpath(__file__))
+audio_file = dir_path+"/600898_short.wav"
 audio_array=split_sb(audio_file)
 export_np(audio_array,2)
 
