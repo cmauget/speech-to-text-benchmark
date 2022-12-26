@@ -1,0 +1,10 @@
+French big model for Vosk
+
+WER
+
+%WER 14.72 [ 22869 / 155330, 3598 ins, 1972 del, 17299 sub ] exp/chain_b/tdnn/decode_test_cv_rnnlm/wer_12_0.0
+%WER 14.80 [ 1457 / 9843, 226 ins, 120 del, 1111 sub ] exp/chain_b/tdnn/decode_test_cv_small_rnnlm/wer_12_0.0
+%WER 11.64 [ 10843 / 93167, 1082 ins, 1243 del, 8518 sub ] exp/chain_b/tdnn/decode_test_mls_rnnlm/wer_11_0.0
+%WER 13.10 [ 2019 / 15412, 595 ins, 469 del, 955 sub ] exp/chain_b/tdnn/decode_test_mtedx_rnnlm/wer_12_0.0
+%WER 21.61 [ 16025 / 74145, 2846 ins, 4375 del, 8804 sub ] exp/chain_b/tdnn/decode_test_podcast_reseg_rnnlm/wer_10_0.0
+%WER 13.22 [ 6258 / 47342, 1109 ins, 2042 del, 3107 sub ] exp/chain_b/tdnn/decode_test_voxpopuli_rnnlm/wer_12_0.0
