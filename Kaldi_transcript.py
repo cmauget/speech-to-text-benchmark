@@ -11,7 +11,7 @@ class Kaldi_transcript:
     def __init__(self):        
         self.SAMPLE_RATE = 16000
         SetLogLevel(0)
-        self.model = Model("model")
+        self.model = Model("vosk_model")
         self.rec = KaldiRecognizer(self.model, self.SAMPLE_RATE)
 
 
@@ -27,8 +27,8 @@ class Kaldi_transcript:
                 else:
                     self.rec.PartialResult()
             final = self.rec.FinalResult()
-            print(final[14:len(final)-3])
-            print(final)
+            #print(final[14:len(final)-3])
+            #print(final)
             return final[14:len(final)-3]   
 
 if __name__ == "__main__":

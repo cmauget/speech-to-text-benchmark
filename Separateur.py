@@ -14,6 +14,7 @@ class Separateur:
 
     def split_silence(self,audio_file,nom_dossier):
         #Split un audio avec les silences
+        
         sound_file = AudioSegment.from_wav(audio_file)
         audio_chunks = split_on_silence(sound_file, min_silence_len=500, silence_thresh=-33, keep_silence=5000 )
         dir_path = os.path.dirname(os.path.realpath(__file__))
@@ -34,6 +35,7 @@ class Separateur:
 
     def split_sb(self,audio_file):
         #Separe les audios des deux personnes renvoie un array d'audios (chaque i de l'array est une personne qui parle)
+        print(audio_file)
         audio ,fs = torchaudio.load(audio_file)
 
         resampler = torchaudio.transforms.Resample(fs, 8000) 
