@@ -1,4 +1,4 @@
-import speech_recognition as sr
+import speech_recognition as sr # type: ignore
 
 audio_file = "/home/cmauget/Bureau/Wikit/600898_short.wav"
 

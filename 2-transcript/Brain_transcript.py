@@ -1,4 +1,4 @@
-from speechbrain.pretrained import EncoderDecoderASR
+from speechbrain.pretrained import EncoderDecoderASR # type: ignore
 
 
 class Brain_transcript:

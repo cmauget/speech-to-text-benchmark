@@ -1,9 +1,9 @@
 import os
-from pydub import AudioSegment
-from pydub.silence import split_on_silence
+from pydub import AudioSegment # type: ignore
+from pydub.silence import split_on_silence # type: ignore
 import torchaudio
 import numpy as np
-from speechbrain.pretrained import SepformerSeparation
+from speechbrain.pretrained import SepformerSeparation # type: ignore
 from scipy.io.wavfile import write
 
 def split_silence(audio_file):
