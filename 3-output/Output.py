@@ -1,6 +1,9 @@
 import json
 import os
-from Kaldi_transcript import *
+import sys
+sys.path.insert(0,"../2-transcript")
+from Whisper_transcript import * # type: ignore
+
 class Output :
     def to_JSON(this,transcripter,dossier_personne_1,dossier_personne_2,nom_1,nom_2,nom_json):
 
@@ -26,5 +29,5 @@ class Output :
 
 if __name__ == "__main__":
     o = Output()
-    transcripter = Kaldi_transcript
+    transcripter = Whisper_transcript # type: ignore
     o.to_JSON(transcripter,"p0","p1","Personne0","Personne1","nom")
