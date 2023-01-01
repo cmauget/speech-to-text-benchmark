@@ -52,11 +52,11 @@ class Separateur:
         return audio_array
 
 
-    def export_np(self,audio_array , fs=8000):
+    def export_np(self,audio_array ,path, fs=8000):
         #Exporte les différentes personnes dans différents fichiers
         for i in range(np.shape(audio_array)[1]):
             scaled = np.int16(audio_array[:,i] / np.max(np.abs(audio_array[:,i])) * 32767)
-            write('personne{0}.wav'.format(i), fs, scaled)
+            write(path+'personne{0}.wav'.format(i), fs, scaled)
         return np.shape(audio_array)[1]
 
 
