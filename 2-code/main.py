@@ -1,11 +1,11 @@
 
-from Kaldi_transcript import *
+from Sphinx_transcript import *
 from Output import *
 from Separateur import *
 
 
 separateur = Separateur()
-transcripter = Kaldi_transcript()
+transcripter = Sphinx_transcript()
 output = Output()
 
 document_a_traiter = str(sys.argv[1])
@@ -14,7 +14,7 @@ chemin_relatif_sortie = "../3-output/"
 print(document_a_traiter)
 
 
-audio_tab = separateur.split_sb(document_a_traiter)
+audio_tab = separateur.split_sb(chemin_relatif_entree+document_a_traiter)
 nb_personnes_entendues = separateur.export_np(audio_tab,chemin_relatif_entree)
 #nb_personnes_entendues = 2
 for i in range(nb_personnes_entendues):
