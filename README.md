@@ -9,6 +9,10 @@ Notre code s'articule autour de trois modules :
 * La couche de traduction
 * La couche de sortie
 
+<a href="url"><img src="https://github.com/cmauget/speech-to-text-benchmark/blob/main/utils/diag.png" height="383" width="325" ></a>
+
+  
+  
 ## Setup
 Nous utilisons de nombreuses bibliothèques python ainsi que des modèles tel que :
 * [Speechrabin](https://speechbrain.github.io/)
