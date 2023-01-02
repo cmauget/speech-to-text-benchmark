@@ -16,7 +16,7 @@ Nous utilisons de nombreuses bibliothèques python ainsi que des modèles tel qu
 * [Vosk](https://alphacephei.com/vosk/)
 * [Whisper](https://github.com/openai/whisper)  
   
-Pour faciliter l'installation nous avons créé un environnement [conda](https://docs.conda.io/en/latest/) avec toute les dépendaces. Vous pouvez trouver le fichier de configuration dans utils/environment.yaml.  
+Pour faciliter l'installation nous avons créé un environnement [conda](https://docs.conda.io/en/latest/) avec toute les dépendances. Vous pouvez trouver le fichier de configuration dans utils/environment.yaml.  
 
 ---------------------------------------
 Vous pouvez changer le nom de l'environnement (wikit par défaut) en changeant le nom écrit à la première ligne. Il faudra par la suite modifié le wikit par le nom choisit.
@@ -25,7 +25,11 @@ Vous devez au sein de environment.yaml changer la dernière ligne :
 
     prefix: !modify !this ~/anaconda3/envs/wikit
 
-Par le chemin d'installation de conda (ex: _prefix: /home/user/anaconda3/envs/wikit_)
+Par le chemin d'installation de conda, ex :
+
+    prefix: /home/user/anaconda3/envs/wikit
+    
+Il ne reste plus qu'a installer l'environnement avec la commande : 
 
     conda env create -f environment.yml  
     
