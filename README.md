@@ -25,7 +25,7 @@ Vous devez au sein de environment.yaml changer la dernière ligne :
 
     prefix: !modify !this ~/anaconda3/envs/wikit
 
-Par le chemin d'installation de conda (ex: _/home/user/anaconda3/envs/wikit_)
+Par le chemin d'installation de conda (ex: _prefix: /home/user/anaconda3/envs/wikit_)
 
     conda env create -f environment.yml  
     
