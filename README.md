@@ -12,7 +12,7 @@ Notre code s'articule autour de trois modules :
 ## Setup
 Nous utilisons de nombreuses bibliothèques python ainsi que des modèles tel que :
 * [Speechrabin](https://speechbrain.github.io/)
-* [Sphinx](https://cmusphinx.github.io/)
+* [Sphinx](https://github.com/bambocher/pocketsphinx-python)
 * [Vosk](https://alphacephei.com/vosk/)
 * [Whisper](https://github.com/openai/whisper)  
   
