@@ -11,12 +11,12 @@ Notre code s'articule autour de trois modules :
 
 ## Setup
 Nous utilisons de nombreuses bibliothèques python ainsi que des modèles tel que :
-* Speechrabin
-* Sphinx
-* Vosk
+* [Speechrabin](https://speechbrain.github.io/)
+* [Sphinx](https://cmusphinx.github.io/)
+* [Vosk](https://alphacephei.com/vosk/)
 * [Whisper](https://github.com/openai/whisper)  
   
-Pour faciliter l'installation nous avons créé un environnement conda avec toute les dépendaces. Vous pouvez trouver le fichier de configuration dans utils/sb.yaml.  
+Pour faciliter l'installation nous avons créé un environnement [conda](https://docs.conda.io/en/latest/) avec toute les dépendaces. Vous pouvez trouver le fichier de configuration dans utils/sb.yaml.  
 
     conda env create -f sb.yml  
     
