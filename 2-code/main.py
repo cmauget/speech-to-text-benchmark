@@ -1,12 +1,32 @@
 
 from Sphinx_transcript import *
+from Brain_transcript import * 
+from BrainW_transcript import *
+from Whisper_transcript import *
+from Kaldi_transcript import *
 from Output import *
 from Separateur import *
 
-
-separateur = Separateur()
-transcripter = Sphinx_transcript()
 output = Output()
+separateur = Separateur()
+choice = input("1 - Sphinx \n2 - Brain \n3 - BrainW \n4 - Whisper \n5 - Kaldi \nEnter model to use : ")
+
+match choice:
+    case "1":
+        transcripter = Sphinx_transcript()
+    case "2":
+        transcripter = Brain_transcript()
+    case "3":
+        transcripter = BrainW_transcript()
+    case "4":
+        transcripter = Whisper_transcript()
+    case "5":
+        transcripter = Kaldi_transcript()
+    case _:
+        print("Invalid syntax, defaulting to Whisper")
+        transcripter = Whisper_transcript()
+
+
 
 document_a_traiter = str(sys.argv[1])
 chemin_relatif_entree="../1-input/"
