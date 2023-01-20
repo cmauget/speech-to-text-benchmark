@@ -9,12 +9,12 @@ class Output :
         l={}
         l[nom_1]={}
         l[nom_2]={}
-        for file in files :
+        for file in sorted(files) :
             name = file.split(".")[0]
             l[nom_1][name]=transcripter.transcript(dossier_personne_1+"/"+file)
 
         files = os.listdir(dossier_personne_2)
-        for file in files :
+        for file in sorted(files) :
             name = file.split(".")[0]
             l[nom_2][name]=transcripter.transcript(dossier_personne_2+"/"+file)
 

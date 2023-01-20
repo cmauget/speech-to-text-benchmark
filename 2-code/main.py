@@ -23,8 +23,8 @@ match choice:
     case "5":
         transcripter = Kaldi_transcript()
     case _:
-        print("Invalid syntax, defaulting to Whisper")
-        transcripter = Whisper_transcript()
+        print("Invalid syntax, defaulting to BrainW")
+        transcripter = BrainW_transcript()
 
 
 
